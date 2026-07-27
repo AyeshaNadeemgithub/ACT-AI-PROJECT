@@ -210,15 +210,15 @@ Keep responses supportive, respectful, and non-judgmental.
 
 ---
 
-## Dashboard
+## Login
 
-![Dashboard](screenshots/patient dashboard.png)
+![Dashboard](screenshots/login.png)
 
 ---
 
-## AI Chatbot
+## Appointments
 
-![Chatbot](screenshots/AI support.png)
+![Chatbot](screenshots/appointments.png)
 
 ---
 
