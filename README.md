@@ -222,28 +222,15 @@ Keep responses supportive, respectful, and non-judgmental.
 
 ---
 
-## Mood Tracker
+## Chatbot
 
-![Mood Tracker](screenshots/mood tracker.png)
+![Mood Tracker](screenshots/chatbot.png)
 
 ---
 
 ## Journal
 
 ![Journal](screenshots/journal.png)
-
-> Create a `screenshots` folder inside your repository and add these images.
-
-Example:
-
-```
-screenshots/
-    home.png
-    dashboard.png
-    chatbot.png
-    mood.png
-    journal.png
-```
 
 ---
 
