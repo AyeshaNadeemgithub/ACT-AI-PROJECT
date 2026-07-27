@@ -206,25 +206,25 @@ Keep responses supportive, respectful, and non-judgmental.
 
 ## Home Page
 
-![Home](screenshots/home.png)
+![Home](screenshots/homepage.png)
 
 ---
 
 ## Dashboard
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/patient dashboard.png)
 
 ---
 
 ## AI Chatbot
 
-![Chatbot](screenshots/chatbot.png)
+![Chatbot](screenshots/AI support.png)
 
 ---
 
 ## Mood Tracker
 
-![Mood Tracker](screenshots/mood.png)
+![Mood Tracker](screenshots/mood tracker.png)
 
 ---
 
