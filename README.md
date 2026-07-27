@@ -1,270 +1,346 @@
-# 🧘 CalmMind — AI-Powered Mental Wellness Platform
+# 🧠 AI-Powered Mental Wellness Platform
 
-CalmMind is a full-stack mental wellness web application that provides patients with 24/7 AI emotional support, mood tracking, private journaling, and appointment booking with licensed psychologists — all in one secure platform.
-
----
-
-## Team
-
-- Ayesha Nadeem
-- Kainat
-- Yousuf Hussain Khan
+An AI-powered web application that helps users monitor their mental well-being through mood tracking, private journaling, AI-powered conversations, and mental health resources—all within a secure and user-friendly platform.
 
 ---
 
-## Features
+## 📌 Problem Statement
 
-- **AI Chatbot** — 24/7 emotional support powered by Groq (Llama 3.3 70B). Saves full chat history per patient. States it is not a replacement for a psychologist at the start of every session
-- **Mood Tracking** — Log daily mood with emoji scale, energy level, sleep quality, and keyword tags. Visualized as charts
-- **Private Journal** — Personal journal entries with full CRUD — create, edit, delete. Private to each patient
-- **Appointment Booking** — UI for booking sessions with psychologists (backend routes in progress)
-- **Reward & Streak System** — Earn points for logging mood, writing journal entries, and using chat. Unlock badges automatically
-- **Notifications** — In-app notifications for badge milestones and point achievements
-- **Role-Based Access** — Separate dashboards and flows for Patients, Psychologists, and Admins
+Mental health challenges such as stress, anxiety, and depression often go unnoticed because many people hesitate to seek professional help due to stigma, cost, or lack of accessibility.
 
----
+The **AI-Powered Mental Wellness Platform** provides an accessible first step by allowing users to:
 
-## Tech Stack
+- Track their emotional well-being
+- Maintain a private digital journal
+- Chat with an AI mental wellness assistant
+- Explore self-care resources
+- Build healthy habits over time
 
-| Layer | Technology |
-|-------|-----------|
-| Frontend | React.js 18, React Router v6 |
-| Styling | Custom design system (theme.js) |
-| Backend | Node.js, Express.js |
-| Database | PostgreSQL via Supabase, Prisma ORM |
-| AI | Groq API (Llama 3.3 70B) |
-| Auth | JWT (JSON Web Tokens) + bcrypt |
-| Deployment | Vercel (frontend), Render (backend) |
+This platform is designed for:
+
+- Students
+- Working professionals
+- Individuals experiencing daily stress
+- Anyone interested in monitoring and improving their mental wellness
 
 ---
 
-## Project Structure
+# 🌐 Live Demo
+
+🔗 **Live Application:**
+
+https://ai-powered-mental-wellness-platform.vercel.app/
+
+---
+
+# ✨ Features
+
+## 🔐 User Authentication
+
+- Secure Sign Up
+- Login & Logout
+- Protected Dashboard
+- User-specific data
+
+---
+
+## 😊 Mood Tracking
+
+- Log daily mood
+- Select mood level
+- Add optional notes
+- View mood history
+- Track emotional trends over time
+
+---
+
+## 📓 Private Journal
+
+- Create journal entries
+- Edit entries
+- Delete entries
+- Secure personal storage
+- Reflect on thoughts and emotions
+
+---
+
+## 🤖 AI Mental Wellness Chatbot
+
+Users can interact with an AI assistant that:
+
+- Listens empathetically
+- Offers emotional support
+- Suggests healthy coping strategies
+- Encourages mindfulness
+- Provides stress-management techniques
+- Helps users reflect on emotions
+
+> **Note:** The chatbot is **not** a replacement for licensed mental health professionals.
+
+---
+
+## 📅 Appointment Interface
+
+- View available appointments
+- Book sessions
+- Manage appointment information
+
+---
+
+## 🏆 Reward System
+
+- Earn points for healthy habits
+- Encourage consistency
+- Increase engagement
+
+---
+
+## 📱 Responsive Design
+
+- Desktop support
+- Tablet support
+- Mobile-friendly UI
+
+---
+
+# 🤖 AI Feature
+
+## AI Mental Wellness Assistant
+
+The application includes an AI-powered chatbot built using **Llama 3.3 70B** via the **Groq API**.
+
+### What it does
+
+The chatbot can:
+
+- Answer mental wellness questions
+- Encourage healthy routines
+- Provide grounding exercises
+- Suggest relaxation techniques
+- Help users reflect on feelings
+- Promote positive mental health habits
+
+---
+
+## Example System Prompt
+
+```text
+You are a compassionate and supportive AI Mental Wellness Assistant.
+
+Your goal is to help users reflect on their emotions, encourage healthy coping strategies, and provide evidence-based mental wellness suggestions.
+
+Always respond with empathy and kindness.
+
+Avoid making medical diagnoses.
+
+Do not claim to be a licensed therapist.
+
+If a user expresses thoughts of self-harm, suicide, or immediate danger, encourage them to contact local emergency services or a trusted mental health professional immediately.
+
+Keep responses supportive, respectful, and non-judgmental.
+```
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+
+- React.js
+- Next.js
+- HTML5
+- CSS3
+- Tailwind CSS
+- JavaScript
+
+## Backend
+
+- Node.js
+- FastAPI
+- REST APIs
+
+## Database
+
+- MySQL
+- PostgreSQL
+
+## AI Services
+
+- Groq API
+- Llama 3.3 70B
+
+## Authentication
+
+- JWT Authentication
+
+## Deployment
+
+- Vercel
+- Render
+
+## Version Control
+
+- Git
+- GitHub
+
+---
+
+# 📦 Tools & Services Used
+
+| Tool | Purpose |
+|-------|----------|
+| VS Code | Development |
+| Git | Version Control |
+| GitHub | Repository Hosting |
+| Vercel | Deployment |
+| Groq API | AI inference |
+| Llama 3.3 70B | Large Language Model |
+| Postman | API Testing |
+| MySQL | Database |
+| PostgreSQL | Database |
+| Tailwind CSS | Styling |
+
+---
+
+# 📸 Screenshots
+
+## Home Page
+
+![Home](screenshots/home.png)
+
+---
+
+## Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+## AI Chatbot
+
+![Chatbot](screenshots/chatbot.png)
+
+---
+
+## Mood Tracker
+
+![Mood Tracker](screenshots/mood.png)
+
+---
+
+## Journal
+
+![Journal](screenshots/journal.png)
+
+> Create a `screenshots` folder inside your repository and add these images.
+
+Example:
 
 ```
-AI-Powered-Mental-Wellness-Platform/
-│
-├── backend/                        # Express.js API server
-│   ├── prisma/
-│   │   ├── schema.prisma           # Full database schema
-│   │   └── seed.js                 # Seeds badges and mood tags
-│   ├── src/
-│   │   ├── lib/
-│   │   │   └── prisma.js           # Prisma client singleton
-│   │   ├── middleware/
-│   │   │   └── auth.js             # JWT protect + requireRole
-│   │   ├── routes/
-│   │   │   ├── auth.js             # Signup + login for all roles
-│   │   │   ├── chat.js             # AI chat with Groq + session history
-│   │   │   ├── dashboard.js        # Stats, notifications, badges
-│   │   │   ├── journal.js          # Full CRUD journal entries
-│   │   │   └── mood.js             # Mood logging + history
-│   │   └── utils/
-│   │       └── gamification.js     # Points, streaks, badge engine
-│   ├── .env.example                # Template for environment variables
-│   ├── package.json
-│   └── server.js                   # Express app entry point
-│
-├── src/                            # React frontend
-│   ├── api/
-│   │   └── index.js                # All API calls in one place
-│   ├── components/
-│   │   ├── layout/                 # Sidebars, topbars, page layouts
-│   │   └── ui/                     # Reusable UI components
-│   ├── data/
-│   │   └── index.js                # Static data, nav items, quick actions
-│   ├── pages/                      # One file per page/route
-│   ├── styles/
-│   │   └── theme.js                # Colors, fonts, spacing — edit here
-│   ├── App.jsx                     # Routes
-│   └── index.jsx                   # Entry point
-│
-├── public/                         # Static assets
-├── package.json                    # Frontend dependencies
-└── README.md
+screenshots/
+    home.png
+    dashboard.png
+    chatbot.png
+    mood.png
+    journal.png
 ```
 
 ---
 
-## Getting Started
+# 🚀 Installation
 
-### Prerequisites
-
-- Node.js v18+
-- npm
-- A [Supabase](https://supabase.com) account (free) — for the PostgreSQL database
-- A [Groq](https://console.groq.com) account (free) — for the AI chatbot
-
----
-
-### 1. Clone the repository
+## Clone the repository
 
 ```bash
 git clone https://github.com/AyeshaNadeemgithub/AI-Powered-Mental-Wellness-Platform.git
+```
+
+Move into the project directory:
+
+```bash
 cd AI-Powered-Mental-Wellness-Platform
 ```
 
 ---
 
-### 2. Set up Supabase (database)
+## Install dependencies
 
-1. Go to [supabase.com](https://supabase.com) and create a free account
-2. Create a new project and set a database password
-3. Go to **Project Settings → Database → Connection string → Prisma**
-4. Copy the two connection strings shown — you will need them in the next step
-
----
-
-### 3. Get a Groq API key (AI chatbot)
-
-1. Go to [console.groq.com](https://console.groq.com) and create a free account
-2. Go to **API Keys → Create API Key**
-3. Copy the key — you will need it in the next step
-
----
-
-### 4. Configure environment variables
-
-Create a `.env` file inside the `backend/` folder. Use `backend/.env.example` as a template:
+Frontend:
 
 ```bash
-cp backend/.env.example backend/.env
+npm install
 ```
 
-Then open `backend/.env` and fill in your values:
+Backend:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Configure Environment Variables
+
+Create a `.env` file.
+
+Example:
 
 ```env
-# From Supabase → Project Settings → Database → Connection string → Prisma
-DATABASE_URL="postgresql://postgres.YOURPROJECT:YOURPASSWORD@aws-X.pooler.supabase.com:6543/postgres?pgbouncer=true"
-DIRECT_URL="postgresql://postgres.YOURPROJECT:YOURPASSWORD@aws-X.pooler.supabase.com:5432/postgres"
-
-# Any long random string — used to sign JWT tokens
-JWT_SECRET="replace_with_a_long_random_string"
-
-# Secret code required when signing up as an Admin
-ADMIN_ACCESS_CODE="YOUR_ADMIN_CODE"
-
-# From console.groq.com → API Keys
-GROQ_API_KEY="gsk_your_groq_key_here"
-
-PORT=5000
-```
-
-> ⚠️ Never commit your `.env` file. It is already in `.gitignore`.
-
----
-
-### 5. Install dependencies
-
-**Backend:**
-```bash
-cd backend
-npm install
-```
-
-**Frontend** (from the root folder):
-```bash
-npm install
+GROQ_API_KEY=your_api_key
+DATABASE_URL=your_database_url
+JWT_SECRET=your_secret_key
 ```
 
 ---
 
-### 6. Set up the database
-
-Run this from inside the `backend/` folder:
+## Run Frontend
 
 ```bash
-# Create all tables in your Supabase database
-npx prisma db push
-
-# Seed the database with starter badges and mood tags
-node prisma/seed.js
-```
-
-> Use `prisma db push` — do NOT use `prisma migrate dev` with Supabase as it can cause issues with cloud databases.
-
----
-
-### 7. Run the app
-
-You need **two terminals** running at the same time:
-
-**Terminal 1 — Backend:**
-```bash
-cd backend
 npm run dev
 ```
-You should see: `🌿 CalmMind backend running on http://localhost:5000`
 
-**Terminal 2 — Frontend** (from root folder):
+---
+
+## Run Backend
+
 ```bash
-npm start
+uvicorn main:app --reload
 ```
-The app will open automatically at [http://localhost:3000](http://localhost:3000)
 
 ---
 
-### 8. Create your first account
+# 📁 Project Structure
 
-1. Go to `http://localhost:3000`
-2. Click **Get Started** and sign up as a **Patient**
-3. Log in and explore the dashboard, mood tracking, journal, and chat
-
-To create an **Admin** account, you will need the `ADMIN_ACCESS_CODE` you set in `.env`.
-
----
-
-## API Routes
-
-| Method | Route | Description | Auth |
-|--------|-------|-------------|------|
-| POST | `/api/auth/patient-signup` | Register as patient | No |
-| POST | `/api/auth/therapist-signup` | Register as psychologist | No |
-| POST | `/api/auth/admin-signup` | Register as admin | No |
-| POST | `/api/auth/login` | Login (all roles) | No |
-| GET | `/api/auth/me` | Get current user | Yes |
-| POST | `/api/mood` | Log a mood entry | Yes |
-| GET | `/api/mood` | Get mood history | Yes |
-| POST | `/api/journal` | Create journal entry | Yes |
-| GET | `/api/journal` | Get all journal entries | Yes |
-| PUT | `/api/journal/:id` | Update journal entry | Yes |
-| DELETE | `/api/journal/:id` | Delete journal entry | Yes |
-| POST | `/api/chat/session` | Start a new chat session | Yes |
-| POST | `/api/chat/message` | Send message, get AI reply | Yes |
-| GET | `/api/chat/sessions` | Get all past sessions | Yes |
-| GET | `/api/chat/session/:id/messages` | Get messages for a session | Yes |
-| GET | `/api/dashboard` | Get dashboard data | Yes |
-| GET | `/api/dashboard/notifications` | Get notifications | Yes |
-| PUT | `/api/dashboard/notifications/mark-read` | Mark all as read | Yes |
-| DELETE | `/api/dashboard/notifications/clear-all` | Clear all notifications | Yes |
+```
+AI-Powered-Mental-Wellness-Platform/
+│
+├── frontend/
+├── backend/
+├── screenshots/
+├── public/
+├── components/
+├── pages/
+├── api/
+├── README.md
+└── package.json
+```
 
 ---
 
-## What's Still In Progress
+# 🎯 Future Improvements
 
-- Appointments backend routes (UI is complete, API routes not yet built)
-- Admin dashboard backend (UI is complete, API routes not yet built)
-- Psychologist dashboard backend (UI is complete, no live data yet)
-- Socket.io real-time chat between patients and psychologists
-- Email verification on signup
-
----
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/your-feature-name`
-3. Commit your changes: `git commit -m "feat: add your feature"`
-4. Push to the branch: `git push origin feature/your-feature-name`
-5. Open a Pull Request
+- Emotion detection from text
+- Voice interaction
+- Daily wellness reminders
+- Personalized wellness plans
+- Mood analytics dashboard
+- AI-generated journal summaries
+- Emergency contact integration
+- Multi-language support
 
 ---
 
-## License
 
-This project is for academic and educational purposes.
+# 📄 License
 
----
-
-> CalmMind — because mental health care should be accessible to everyone.
-#   A C T - A I - P R O J E C T  
- 
+This project is developed for educational and portfolio purposes.
